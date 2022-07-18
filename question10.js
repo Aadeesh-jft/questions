@@ -8,9 +8,13 @@ function arrSum(arr, i = 0) {
     }
 }
 
-function missingNumberFinder(arr) {
+let n = 100;
+nSum = n * (n + 1) / 2;
+console.log(nSum);
+
+function missingNumberFinder(arr, nSum) {
     let sum = arrSum(arr);
-    //sum of all natural numbers 1-100 is 5050
-    let diff = 5050 - sum;
+    
+    let diff = nSum - sum;
     return diff;
 }

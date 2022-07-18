@@ -1,13 +1,14 @@
-let arr = [5, 5, 5, 5, 4, 4, 4, 3, 10, 9, 8, 7, 6];
-let numSet = new Set(arr);
+arr = [1, 2, 4, 5, 6, 7 ,7, 8, 9, 10];
 
-
-function thirdLargestNum(set) {
+function thirdLargestNum(arr) {
+    if (arr.length == 2) {
+        return (Math.min(...arr));
+    }
+    set = new Set(arr);
     for (let i = 0; i < 2; i++) {
         largestNum = Math.max(...set);
         set.delete(largestNum);
     }
-    return Math.max(...set);
+    return (Math.max(...set));
 }
 
-console.log(thirdLargestNum(numSet))
