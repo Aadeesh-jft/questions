@@ -15,7 +15,7 @@ function duplicateCharacters(s, dCount = {}) {
 }
 
 countedDict = duplicateCharacters(splitArray);
-console.log(countedDict);
+//console.log(countedDict);
 array = [];
 for (key in countedDict) {
     tempArr = [countedDict[key], key];
@@ -60,7 +60,7 @@ function sorter(array) {
     
 }
 */
-array.sort().reverse()
+array.sort().reverse();
 for (let i = 0; i < array.length - 1; i++) {
     if ((array[i][0] == array[i + 1][0]) && (array[i][1] > array[i + 1][1])) {
         let temp = array[i];
