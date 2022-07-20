@@ -15,7 +15,7 @@ function duplicateCharacters(s, dCount = {}) {
 }
 
 countedDict = duplicateCharacters(splitArray);
-//console.log(countedDict);
+console.log(countedDict);
 array = [];
 for (key in countedDict) {
     tempArr = [countedDict[key], key];
@@ -23,6 +23,17 @@ for (key in countedDict) {
     //console.log(tempArr);
     array.push(tempArr);
 }
+
+array.sort().reverse();
+for (let i = 0; i < array.length - 1; i++) {
+    if ((array[i][0] == array[i + 1][0]) && (array[i][1] > array[i + 1][1])) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+    }
+}
+console.log(array);
+
 /*
 console.log(array);
 console.log(array.sort().reverse());
@@ -49,7 +60,7 @@ function sorter(array) {
     }
     //console.log(array);
     
-    for (let i = 0; i < array.length - 1; i++) {
+    for (let i = 0; i < array.length - 1; i++) {array.sort().reverse() 
         if ((array[i][0] == array[i + 1][0]) && (array[i][1] > array[i + 1][1])) {
             let temp = array[i];
             array[i] = array[i + 1];
@@ -60,12 +71,3 @@ function sorter(array) {
     
 }
 */
-array.sort().reverse();
-for (let i = 0; i < array.length - 1; i++) {
-    if ((array[i][0] == array[i + 1][0]) && (array[i][1] > array[i + 1][1])) {
-        let temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-    }
-}
-console.log(array);

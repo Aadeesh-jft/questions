@@ -1,8 +1,7 @@
 let inputString = "aadeesh";
 let sArray = inputString.split("");
-let dCount = {};
 console.log(sArray);
-function duplicateCharacters(s, outputString = "") {
+function duplicateCharacters(s, dCount = {}) {
     for (let i = 0; i < s.length; i++) {
         if (s[i] in dCount) {
             dCount[s[i]]+= 1;
@@ -11,6 +10,11 @@ function duplicateCharacters(s, outputString = "") {
             dCount[s[i]] = 1;
         }
     }
-    console.log(dCount);
+    for (key in dCount) {
+        if (dCount[key] > 1) {
+            console.log(key, dCount[key]);
+        }
+    }
+    //console.log(dCount);
 }
 duplicateCharacters(inputString);

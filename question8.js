@@ -9,7 +9,7 @@ function isEven(n) {
     }
 }
 if (isEven(x)) {
-    console.log(`${x} is even.`)
+    console.log(`${x} is even`)
 } else {
     console.log(`${x} is odd.`)
 }

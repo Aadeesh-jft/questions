@@ -11,4 +11,3 @@ function thirdLargestNum(arr) {
     }
     return (Math.max(...set));
 }
-

@@ -1,5 +1,6 @@
 let inputString = "hi";
 let l = inputString.length;
+
 function stringReverser(s, l, outputString = "") {
     if ((l) == 0) {
         return outputString;
